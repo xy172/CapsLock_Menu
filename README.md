@@ -1,6 +1,6 @@
 # CapsLock Menu
 
-This is a copy of S3rLoG's capslock menu, but I replaced the msgbox's with traytip notifications so they are less intrusive.
+This is a fork of S3rLoG's capslock menu, but I replaced the msgbox's with traytip notifications so they are less intrusive.
 
 ![CapsLock_Menu_01](https://user-images.githubusercontent.com/80262347/112947889-8d18cc80-9161-11eb-918b-42e3e173df32.png)
 
