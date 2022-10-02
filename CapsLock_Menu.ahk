@@ -1,9 +1,10 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force  ; Replaces the old instance automatically.
 SetBatchLines -1  ; Run the script at maximum speed.
+Menu, Tray, Tip, S3rLoG's CapsLock_Menu.
 
 CapsLockMenu()
 {
@@ -56,7 +57,7 @@ CopyClipboard()
     ClipWait, 1.5, 1
     if ErrorLevel
     {
-        MsgBox, 262208, AutoHotkey, Copy to clipboard failed.
+        TrayTip AutoHotkey, Copy to clipboard failed., 3, 19
         Clipboard := ClipSaved  ; restore the original clipboard contents
         ClipSaved := ""  ; clear the variable
         return
@@ -101,7 +102,7 @@ CapsLockey(state := false, toggle := false)
         5: The state handed in the function call
     */
     SetCapsLockState % state
-    MsgBox, 262208, CapsLock Menu, % messages[(GetKeyState("CapsLock", "T") == state) ? state : "failed"]
+    TrayTip CapsLock Menu, % messages[(GetKeyState("CapsLock", "T") == state) ? state : "failed"], 3, 17
 }
 
 CopyClipboardCLM()
